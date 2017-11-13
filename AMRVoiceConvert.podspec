@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "AMRVoiceConvert"
-  s.version          = "1.0.0"
+  s.version="1.0.0"
   s.summary          = "iOS library convert between .amr and .wav file, support bit code."
   s.description      = <<-DESC
                        It is a library convert between .amr and .wav file, support bit code, which implement by Objective-C. 
