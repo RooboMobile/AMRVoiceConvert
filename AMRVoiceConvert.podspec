@@ -1,20 +1,24 @@
 
 
 Pod::Spec.new do |s|
-  s.name             = 'RBUIKit'
-  s.version="1.0.1"
-  s.summary          = 'A short description of RBUIKit.'
-  s.description      =  'UIKit '
-  s.homepage         = 'https://github.com/RooboMobile/RBUIKit'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'baxiang' => 'baxiang@roobo.com' }
-  s.source           = { :git => 'https://github.com/RooboMobile/RBUIKit.git', :branch => 'master' }
-  s.ios.deployment_target = '7.0'
-  s.source_files = 'RBUIKit/RBUIKit.h'
-  s.frameworks       = 'Foundation', 'UIKit', 'CoreGraphics', 'Photos'
-  s.resource         = 'RBUIKit/**/*.bundle'
-s.subspec 'QMUICore' do |sss|
-    sss.source_files = 'RBUIKit/QMUIKit.h', 'RBUIKit/QMUICore', 'RBUIKit/UIKitExtensions'
-  end
+  s.name             = "AMRVoiceConvert"
+  s.version          = "1.0.0"
+  s.summary          = "iOS library convert between .amr and .wav file, support bit code."
+  s.description      = <<-DESC
+                       It is a library convert between .amr and .wav file, support bit code, which implement by Objective-C. 
+                       DESC
+                       
+  s.homepage         = "https://github.com/RooboMobile/AMRVoiceConvert.git"
+  s.license          = 'MIT'
+  s.author           = { "baxiang" => "baxiang@roobo.com" }
+  s.source           = { :git => 'https://github.com/RooboMobile/AMRVoiceConvert.git', :tag => s.version.to_s }
+ 
+  s.platform     = :ios, '7.0'
+  s.requires_arc = true
+
+  s.source_files = 'AMRVoiceConvert/**/*.{h,m}'
+  s.vendored_libraries = 'AMRVoiceConvert/lib/*.a'
+  s.preserve_path = '**/*.a'
+ 
 
 end
